@@ -148,8 +148,7 @@
 			led-0 {
 				reg = <0>;
 				color = <LED_COLOR_ID_GREEN>;
-				function = LED_FUNCTION_LAN;
-				function-enumerator = <1>;
+				function = LED_FUNCTION_WAN;
 				default-state = "keep";
 			};
 		};
@@ -166,7 +165,7 @@
 &gsw_port2 {
 	status = "okay";
 
-	label = "lan2";
+	label = "lan1";
 };
 
 &gsw_phy2 {
@@ -183,14 +182,14 @@
 
 	color = <LED_COLOR_ID_GREEN>;
 	function = LED_FUNCTION_LAN;
-	function-enumerator = <2>;
+	function-enumerator = <1>;
 	active-low;
 };
 
 &gsw_port3 {
 	status = "okay";
 
-	label = "lan3";
+	label = "lan2";
 };
 
 &gsw_phy3 {
@@ -207,14 +206,14 @@
 
 	color = <LED_COLOR_ID_GREEN>;
 	function = LED_FUNCTION_LAN;
-	function-enumerator = <3>;
+	function-enumerator = <2>;
 	active-low;
 };
 
 &gsw_port4 {
 	status = "okay";
 
-	label = "lan4";
+	label = "lan3";
 };
 
 &gsw_phy4 {
@@ -231,14 +230,14 @@
 
 	color = <LED_COLOR_ID_GREEN>;
 	function = LED_FUNCTION_LAN;
-	function-enumerator = <4>;
+	function-enumerator = <3>;
 	active-low;
 };
 
 &gdm4 {
 	status = "okay";
 
-	openwrt,netdev-name = "lan1";
+	openwrt,netdev-name = "wan";
 
 	phy-handle = <&en8811>;
 	phy-mode = "2500base-x";
